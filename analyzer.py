@@ -3,7 +3,7 @@ import json
 
 
 def analyze_text(text: str) -> dict[str, int]:
-    return {"words": len(text.split())}
+    return {"words": len(text.split()), "characters": len(text)}
 
 
 if __name__ == "__main__":
