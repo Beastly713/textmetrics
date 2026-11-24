@@ -3,8 +3,11 @@ import json
 
 
 def analyze_text(text: str) -> dict[str, int]:
-    return {"words": len(text.split()), "characters": len(text)}
-
+    return {
+        "words": len(text.split()),
+        "characters": len(text),
+        "lines": len(text.splitlines()),
+    }
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
